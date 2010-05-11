@@ -1,9 +1,9 @@
 <% title 'List of Talks' %>
 
 <% if current_page?('/') %>
-  <div id="cover"><%= image_tag 'cover.png' %></div>
+  <div id="cover"><%= image_tag 'cover.jpg' %></div>
 
-  <% if !logged_in? %>
+  <% if !logged_in? && false %>
     <%= render :partial => "soldout" %>
   <% end %>
 <% end %>

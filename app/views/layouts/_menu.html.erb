@@ -1,7 +1,7 @@
 <div id="main-menu">
   <ul>
     <%= menu_to 'Home', root_path %>
-    <%= menu_to 'Calendar', calendar_path %>
+    <%= menu_to 'Schedule', schedule_path %>
     <%= menu_to 'Talks', papers_path %>
     <% if admin? %>
       <%= menu_to 'Submit Talk', new_paper_path %>

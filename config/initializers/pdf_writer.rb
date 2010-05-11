@@ -1,0 +1,1 @@
+require 'pdf/writer' if defined? PDF::Writer
