@@ -1,5 +1,5 @@
 class YahooGeoplanetSearchWrapper
-  LOCALE      = "us"
+  LOCALE      = "cn"
   API_VERSION = "v1"
   API_URL     = "http://where.yahooapis.com/v1/"
   

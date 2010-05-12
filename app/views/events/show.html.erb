@@ -1,6 +1,6 @@
 <% title "Event: #{@event.name}" %>
 <div class="entry">
-  <h3><%= yield(:title) %> (<%= @event.price_euros %>€)</h3>
+  <h3><%= yield(:title) %> <span style="display:none">(<%= @event.price_euros %>€)</span></h3>
   <p>
     <% if @event.out_of_capacity? %>
       Sorry, this event is <span class="full">Complete</span>

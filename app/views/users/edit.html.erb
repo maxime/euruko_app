@@ -26,23 +26,8 @@
   <span id='location_search_loading' style="display:none"><%= image_tag 'spinner.gif' %></span>
   <div id="location_search_places" style="display:none"></div>
   
-  <p><%= f.label :location_country, "Your Country" %> <span class="example">Spain</span><br/>
+  <p><%= f.label :location_country, "Your Country" %> <span class="example">China</span><br/>
   <%= f.text_field :location_country %></p>
-  
-  <%= 
-    observe_field(
-      :user_location_name, 
-      :url        => location_searchs_path,
-      :method     => :post,
-      :frequency  => 0.5,
-      :update     => :location_search_places,
-      :loading    => "$('#location_search_loading').show( 'fast' )",
-      :complete   => "$('#location_search_loading').hide( 'fast' ); $('#location_search_places').show( 'fast' )",
-      :with       => 'query'
-    )
-  %>
-  
-    
   
   <p><%= f.label :personal_web_name, "Homepage Title" %> <span class="example">My Awesome Page</span><br />
   <%= f.text_field :personal_web_name %></p>
@@ -75,9 +60,6 @@
     <p><%= f.label :password_confirmation, 'Confirm New Password' %><br/>
     <%= f.password_field :password_confirmation %></p>
   </div>
-  
-  <p><%= f.label :invoice_info, "Invoice Info" %> <span class="example">Bussiness Details (Full Name, Address, VAT number, etc)</span><br/>
-  <%= f.text_area :invoice_info %></p>
   
   <% if admin? %>
     <p><%= f.label :role, "Role" %><br />

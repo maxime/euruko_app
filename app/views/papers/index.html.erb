@@ -1,8 +1,34 @@
 <% title 'List of Talks' %>
 
 <% if current_page?('/') %>
-  <div id="cover"><%= image_tag 'cover.jpg' %></div>
+  <div id="slider">
+    <%= image_tag 'slides2/slide8.jpg' %>
+    <%= image_tag 'slides2/slide2.jpg' %>
+    <%= image_tag 'slides2/slide10.jpg' %>
+    <%= image_tag 'slides2/slide3.jpg' %>
+    <%= image_tag 'slides2/slide11.jpg' %>
+    <%= image_tag 'slides2/slide4.jpg' %>
+    <%= image_tag 'slides2/slide5.jpg' %>
+    <%= image_tag 'slides2/slide9.jpg' %>
+    <%= image_tag 'slides2/slide6.jpg' %>
+    <%= image_tag 'slides2/slide7.jpg' %>
+  </div>
+  <script type="text/javascript">
+  $(window).load(function() {
+  	setTimeout(function(){
+  		$('#slider').nivoSlider({
+  			effect:'fade',
+  			animSpeed:1000,
+  			slices:15,
+  			pauseTime:4000,
+  			startSlide:0,
+  			directionNav:true,
+  			pauseOnHover:false
+  		});
+  	}, 3000);
+  });
 
+  </script>
   <% if !logged_in? && false %>
     <%= render :partial => "soldout" %>
   <% end %>
